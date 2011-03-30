@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html lang="ja-JP">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+	.my-placeholder {
+		color:#ccc;
+	}
+	.myform {
+		font-size:12px;
+		font-family:Helvetica, Arial, Verdana;
+	}
+	.myform dt {
+		clear:both;
+		float:left;
+		width:50px;
+		padding: 0.5em 0;
+	}
+	.myform dd {
+		padding:0.5em 0;
+		margin:0 0 0 50px;
+	}
+	.myform label {
+		display:block;
+		margin:0;
+		padding:4px 0;
+	}
+	.myform input.jqph {
+		margin:0px;
+		width:20em;
+		padding:3px;
+		border:1px solid #999;
+	}
+	</style>
+</head>
+<body>
+
+<form action="" class="myform">
+	<dl>
+		<dt><label for="your-name">Name:</label></dt>
+		<dd><input type="text" id="your-name" class="jqph" data-placeholder="名前を入力してください" value="" /></dd>
+		<dt><label for="your-mail">Mail:</label></dt>
+		<dd><input type="text" id="your-mail" class="jqph" data-placeholder="メールアドレスを入力してください" value="" /></dd>
+	</dl>
+</form>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.placeholder.js"></script>
+<script type="text/javascript">
+$(".jqph").placeholder( "my-placeholder" );
+</script>
+
+</body>
+</html>
