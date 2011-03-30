@@ -8,7 +8,7 @@
 (function( $, window, document, undefined ){
 	$.fn.extend({
 		/**
-		 * Display a default value just as the placeholder attribute on HTML5 does.
+		 * Display a guide text for input element just as the placeholder attribute on HTML5 does.
 		 * @param {Object|String} config Configuration object or class name string for displaying defualt value.
 		 * @return {Object} jQuery object.
 		 * @example 

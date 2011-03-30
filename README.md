@@ -39,10 +39,9 @@ data-placeholder属性でデフォルト値を設定
 
 ### オプション
 
-String defaultClass  
-: ガイドテキスト表示時にあてるクラス名
+defaultClass (string) : ガイドテキスト表示時にあてるクラス名
 
-### Lisence
+## Lisence
 
 The MIT License
 
