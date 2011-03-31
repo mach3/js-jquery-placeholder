@@ -39,16 +39,26 @@
 <form action="" class="myform">
 	<dl>
 		<dt><label for="your-name">Name:</label></dt>
-		<dd><input type="text" id="your-name" class="jqph" data-placeholder="名前を入力してください" value="" /></dd>
+		<dd><input type="text" id="your-name" name="your-name" class="jqph" data-placeholder="名前を入力してください" value="" /></dd>
 		<dt><label for="your-mail">Mail:</label></dt>
-		<dd><input type="text" id="your-mail" class="jqph" data-placeholder="メールアドレスを入力してください" value="" /></dd>
+		<dd><input type="text" id="your-mail" name="your-mail" class="jqph" data-placeholder="メールアドレスを入力してください" value="" /></dd>
 	</dl>
+	<input type="submit" value="button" />
 </form>
+
+<p id="log"></p>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 <script type="text/javascript" src="jquery.placeholder.js"></script>
 <script type="text/javascript">
-$(".jqph").placeholder( "my-placeholder" );
+$(".jqph").placeholder({
+	defaultClass : "my-placeholder",
+	resetOnSubmit : false
+});
+$(".myform").bind("submit",function(){
+	$("#log").text( $(this).serialize() );
+	return false;
+});
 </script>
 
 </body>

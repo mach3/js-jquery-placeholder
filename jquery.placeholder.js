@@ -19,11 +19,16 @@
 			config = String( typeof( config ) ).toLowerCase() === "string" ?
 				{ defaultClass : config } : config ;
 			var option = $.extend(
-				{ defaultClass : "jquery-placeholder" },
+				{
+					defaultClass : "jquery-placeholder",
+					resetOnSubmit : false
+				},
 				config
 			);
 			this.each( function( i, ele ){
-				var handler = {
+				var input, handler;
+				input = $(this);
+				handler = {
 					blur : function(){
 						var o = $(this);
 						if( o.attr("value") !== "" ) return;
@@ -35,7 +40,14 @@
 						o.attr("value","").removeClass( option.defaultClass );
 					}
 				};
-				$(this).bind( handler );
+				input.bind( handler );
+				if( option.resetOnSubmit ){
+					input.parents("form").bind("submit",function(){
+						if( input.attr("value") === input.data("placeholder") ){
+							input.attr("value","");
+						}
+					});
+				}
 				handler.focus.apply( this );
 				handler.blur.apply( this );
 			});

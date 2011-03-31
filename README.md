@@ -39,7 +39,8 @@ data-placeholder属性でデフォルト値を設定
 
 ### オプション
 
-defaultClass (string) : ガイドテキスト表示時にあてるクラス名
+defaultClass (string) : ガイドテキスト表示時にあてるクラス名  
+resetOnSubmit (boolean) : 送信時に値をクリアするかどうかのbool値
 
 ## Lisence
 
