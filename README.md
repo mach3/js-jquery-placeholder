@@ -1,6 +1,6 @@
 # jQuery Placeholder
 
-## これはなに
+## これはなに？
 
 HTML5のplaceholder属性のようにガイドテキストを薄く表示する為のjQueryプラグイン。  
 
